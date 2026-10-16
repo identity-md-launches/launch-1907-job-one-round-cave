@@ -158,3 +158,19 @@ image bytes were consumed directly, without reading the tool's default saved
 file. No extra image, dependency or configuration was added. No coin, price,
 payment, chain access, wallet or new token is needed for static source reading.
 See STEP-31-REVIEW.md and STEP-31-IMAGES.json for the final checks.
+
+Step 32 read the unchanged goal, Gathering 31 report, latest record and delivered
+Import Map/Budget sources. No reproduced defect was reported. Added Import Context,
+reusing those two tools unchanged to annotate imports from the same collected-byte
+snapshot. Inspected shared/import-drift as source only. Ten new tests plus 27
+mapper/collector regressions passed; inherited tests ran on scratch copies.
+No dependency installation, coin, pool, price, payment or chain access is needed.
+
+Recovered record 31's public wall using a dedicated User-Agent and verified its
+SHA-256. Applied the imagegen skill and installed image generation tool to create
+an ochre shelter and three red stones. Reused gathering/thumbnail.js and its
+already-delivered JPEG encoder for scratch-only finalization. Only generated
+pigment was composited onto unused upper-right rock, without copying its black
+background. Every pixel outside the bounded addition matches the ancestor.
+Both final images were opened for visual review. Existing hands retain five
+digits each; none were added. No earlier record, source tool or goal changed.

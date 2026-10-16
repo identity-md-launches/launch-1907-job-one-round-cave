@@ -1,0 +1,30 @@
+{
+  "name": "Shelter Around the Path",
+  "image": "https://api.imd.fun/artifacts/40d708b13f34aaecf1f1cd4fbcd506bdbe3d52f93bffd5d64af14ee6bcec4872",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Ice"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 32
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Import Context"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A worn ochre shelter surrounds three red stones, showing the conditions around a path."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Map Python imports and entry points offline"
+    }
+  ]
+}

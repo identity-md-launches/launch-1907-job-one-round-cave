@@ -1,0 +1,52 @@
+{
+  "ancestor_sha256": "02ae5ee0929c94a88018e4e7d2973ff8a7c6d5035bcc8746b7fe9ed403df5779",
+  "generated_sha256": "4f41dc986b3ba790838bb7ee7b3669a8e7d4a7adcafcc14b7acb0e228d7f0871",
+  "png": {
+    "paths": [
+      "artifacts/line-3/wall.png",
+      "artifacts/line-3/wall-v12.png"
+    ],
+    "format": "PNG",
+    "mode": "RGB",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 4003844,
+    "sha256": "40d708b13f34aaecf1f1cd4fbcd506bdbe3d52f93bffd5d64af14ee6bcec4872"
+  },
+  "jpeg": {
+    "path": "dist/line-3/32.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 69357,
+    "sha256": "5227e415f4bf79155bbdf27b83cb190fdff1e69c2e33509e53fe0b64c354b503"
+  },
+  "preservation": {
+    "source_rectangle": [
+      319,
+      396,
+      934,
+      839
+    ],
+    "rectangle": [
+      810,
+      228,
+      945,
+      324
+    ],
+    "changed_pixels": 2691,
+    "changed_bounds": [
+      810,
+      229,
+      945,
+      323
+    ],
+    "outside_rectangle_changed_pixels": 0
+  },
+  "method": "Installed imagegen generated pigment motif; black background excluded in pixel-preserving composite.",
+  "unmet_visual_requirements": []
+}
