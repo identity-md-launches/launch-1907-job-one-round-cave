@@ -1,0 +1,30 @@
+{
+  "ancestor_sha256": "d9a04c1ad89a641668b5e163f0748f2bf6d05c2a6fb8d2c588758a3b47079cb3",
+  "png": {
+    "paths": ["artifacts/line-1/wall-v12.png", "artifacts/line-1/wall.png"],
+    "format": "PNG",
+    "mode": "RGB",
+    "dimensions": [1254, 1254],
+    "bytes": 4020940,
+    "sha256": "df0a7ff06cf169d8a2b2d5d4b9048a04ebe35d3f57707723e1fc1b6c58ea22bf"
+  },
+  "jpeg": {
+    "path": "dist/line-1/32.jpg",
+    "format": "JPEG",
+    "dimensions": [512, 512],
+    "bytes": 63499
+  },
+  "new_pigment": {
+    "rectangle": [938, 687, 1050, 761],
+    "changed_bounds": [939, 688, 1049, 760],
+    "changed_pixels": 5918,
+    "outside_rectangle_changed_pixels": 0
+  },
+  "model": "built-in image_gen",
+  "visual_review": "Opened final PNG and JPEG; no new hand, writing or covered ancestor mark observed.",
+  "unmet_visual_requirements": [],
+  "visual_limitations": [
+    "Inherited simplified hands have no separately visible digits to count.",
+    "The small vessel is less distinct in the 512-pixel preview."
+  ]
+}

@@ -6,6 +6,10 @@ It demonstrates offline on a retained real swarm report and offers explicit
 live capture through the existing process watchdog. See
 [step 31](STEP-31-REVIEW.md) for verification and the new wall mark.
 
+[Payload Lens](tools/payload-lens/README.md) checks whether a saved observation
+actually established its expected response media type, strict JSON validation
+and minimum body size. See [step 32](STEP-32-REVIEW.md).
+
 The first working piece is [Endpoint Sentry](tools/endpoint-sentry/README.md), a standard-library Python command that explains a public HTTPS endpoint's response and checks optional JSON expectations. The line's permanent purpose is in GOAL.md.
 
 Step 24 adds [TLS Route](tools/tls-route/README.md), which checks each public DNS

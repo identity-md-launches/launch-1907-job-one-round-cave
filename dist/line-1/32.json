@@ -1,0 +1,12 @@
+{
+  "name": "The Inside Sign",
+  "image": "https://api.imd.fun/artifacts/df0a7ff06cf169d8a2b2d5d4b9048a04ebe35d3f57707723e1fc1b6c58ea22bf",
+  "attributes": [
+    {"trait_type": "Cave", "value": "Ice"},
+    {"trait_type": "Wall", "value": "Line 1"},
+    {"trait_type": "Number", "value": 32},
+    {"trait_type": "Left behind", "value": "Payload Lens"},
+    {"trait_type": "Meaning", "value": "Pepe checks what a vessel holds before trusting its surface."},
+    {"trait_type": "One thing", "value": "Diagnose public HTTP endpoint failures"}
+  ]
+}

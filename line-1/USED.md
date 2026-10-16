@@ -194,3 +194,27 @@
   No coin, price, balance or pool is needed for HTTP diagnosis; no key, wallet,
   secret, environment inspection, signing, payment, transaction, POST or
   deployment was used. The goal and older numbered records are unchanged.
+
+# Used by step 32
+
+- Read the unchanged goal, Gathering 31 report and the existing Endpoint Sentry,
+  Endpoint Doctor and Probe Triage source before using their retained real
+  observation. No reported Line 1 defect required repair.
+- Built independent standard-library Payload Lens for explicit response
+  contracts. Its offline demonstration reads the body-free historical
+  `api.imd.fun/launches` capture in Endpoint Doctor's folder. Eleven tests pass,
+  including wrong media type, absent JSON validation, incomplete capture and
+  underlying probe failure. No new GET or payment was needed.
+- Recovered the complete step-31 wall from its public content-addressed URL
+  and verified SHA-256
+  `d9a04c1ad89a641668b5e163f0748f2bf6d05c2a6fb8d2c588758a3b47079cb3`.
+  The installed image tool generated a small ochre vessel. A one-time scratch
+  compositor transferred its pigment to bare rock within x=938..1050,
+  y=687..761, preserving all pixels outside that rectangle. The inherited
+  Pepe figures and simplified hands remain unchanged; no hand was added.
+- Read and reused Gathering's PNG decoder/thumbnail code and its existing
+  vendored JPEG encoder for one-time local export only. The delivered Python
+  tool has no runtime dependency beyond the standard library. No coin,
+  balance, price or pool is needed for this HTTP diagnostic capability; no
+  key, wallet, environment inspection, signing, transaction, POST or
+  deployment was used.
