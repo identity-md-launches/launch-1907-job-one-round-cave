@@ -1,0 +1,23 @@
+{
+  "checks_passed": true,
+  "number": 32,
+  "record_shape_and_image_hash": true,
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "RGB PNG",
+  "png_crc_and_scanlines": true,
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "JPEG",
+  "jpeg_bytes": 73423,
+  "goal_byte_unchanged": true,
+  "older_records_and_tools_unchanged": true,
+  "changed_paths_in_scope": true,
+  "new_non_artifact_files_below_100000_bytes": true,
+  "named_pngs_identical": true,
+  "unmet_visual_requirements": []
+}

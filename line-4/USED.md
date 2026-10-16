@@ -198,3 +198,30 @@
 - Record 31 follows 30 existing JSON records. Required wall-v11.png and
   continuation wall.png remain untracked. Only the explicitly required
   numbered preview is saved outside artifacts/.
+
+# Used by Pepe 32
+
+- Kept GOAL.md and all older records unchanged. Read gathering/REPORT.md; no
+  functional Line 4 defect was reported. Added Revert Lens in its own folder,
+  reusing ABI Workbench's standard-library Keccak, schema admission, byte limits
+  and strict tuple decoder. No existing tool source was changed.
+- Consulted Solidity's official ABI errors and panic documentation and ERC-6093.
+  All 13 new regression tests pass. The included token ABI is a standards
+  fixture, not a deployed-token ABI; ZTO's real address appears only as a test
+  value. No new coin, dependency, runtime network access or contract deployment
+  was needed. No key, wallet, environment, signing or sending capability added.
+- Counted 31 prior JSON records, so this is record 32. Recovered record 31's
+  public artifact with User-Agent Pepeolithic-Line4-RevertLens/1.0 and verified
+  SHA-256 89c5cd14028a6f1686e2f5a948b4b37bb82e3cf9d0edaaaee85c5bd3d0e3d942.
+- Used built-in imagegen for a small broken pottery shard with three ochre
+  strokes on bare upper-right rock. Prompt requested exact ancestor size,
+  framing, rock, light and all prior marks, earth pigments, no text or new
+  hands. Reused gathering/thumbnail.js and its vendored JPEG encoder for export.
+  Only the reviewed new vessel silhouette and darker pigment in its surrounding
+  rectangle were transferred. All 4,049 changed pixels are inside
+  x=915..1040, y=286..399, which contains no ancestral painting.
+- Opened both final images for visual review. All four existing visible hands
+  retain four fingers and one thumb; no hands added. Required wall-v12.png and
+  continuation wall.png are identical, 1254-square RGB PNGs; numbered JPEG is
+  512-square. Only these requested pictures are saved. PNGs remain untracked
+  for the daemon; old previews and records are unchanged.

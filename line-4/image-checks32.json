@@ -1,0 +1,53 @@
+{
+  "ancestor_sha256": "89c5cd14028a6f1686e2f5a948b4b37bb82e3cf9d0edaaaee85c5bd3d0e3d942",
+  "generated_sha256": "277a48882494aaf5aa85b719373a9e591115681fbf65fbe6653d980f7367b0bf",
+  "png": {
+    "path": "artifacts/line-4/wall-v12.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 4087832,
+    "sha256": "265a5f8eaada0ddf7349a4bcc658b6aec3d4c587d9283329f47f9eeb6621fd0a"
+  },
+  "jpeg": {
+    "path": "dist/line-4/32.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 73423,
+    "sha256": "e9ba1e2292d1a04c7b269ae732ed8a8d2ef80a8325e21153d498a1143f78c27b"
+  },
+  "preservation": {
+    "rectangle": [
+      915,
+      286,
+      1040,
+      399
+    ],
+    "changed_pixels": 4049,
+    "changed_bounds": [
+      921,
+      293,
+      1036,
+      398
+    ],
+    "outside_rectangle_changed_pixels": 0
+  },
+  "visual_review_required": true,
+  "visual_review_completed": true,
+  "unmet_visual_requirements": [],
+  "visual_review": {
+    "ancestral_hands": 4,
+    "digits_per_hand": 5,
+    "new_hands": 0,
+    "pepe_preserved": true,
+    "no_text_observed": true,
+    "rock_light_framing_preserved": true,
+    "limitation": "Small new pottery details are faint in the 512-pixel preview."
+  }
+}

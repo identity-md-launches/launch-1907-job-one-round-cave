@@ -1,0 +1,136 @@
+{
+  "regression": {
+    "command": "python3 -B -m unittest discover -s line-4/tools/revert-lens -v",
+    "tests": 13,
+    "passed": 13,
+    "failed": 0,
+    "observed_seconds": 0.042,
+    "note": "Recorded from the passing local run; one earlier assertion pattern was corrected."
+  },
+  "smoke_commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/revert-lens/revert_lens.py",
+        "--demo"
+      ],
+      "exit": 0,
+      "stdout": {
+        "status": "decoded",
+        "data_bytes": 100,
+        "notice": "Interpretation of supplied bytes only; error data can be fabricated or propagated from another contract. No contract identity or execution is verified.",
+        "selector": "0x08c379a0",
+        "signature": "Error(string)",
+        "arguments": [
+          {
+            "name": "reason",
+            "type": "string",
+            "value": "insufficient ZTO"
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/revert-lens/revert_lens.py",
+        "--data",
+        "0x4e487b710000000000000000000000000000000000000000000000000000000000000011"
+      ],
+      "exit": 0,
+      "stdout": {
+        "status": "decoded",
+        "data_bytes": 36,
+        "notice": "Interpretation of supplied bytes only; error data can be fabricated or propagated from another contract. No contract identity or execution is verified.",
+        "selector": "0x4e487b71",
+        "signature": "Panic(uint256)",
+        "arguments": [
+          {
+            "name": "code",
+            "type": "uint256",
+            "value": 17
+          }
+        ],
+        "panic": {
+          "code_hex": "0x11",
+          "description": "arithmetic overflow or underflow"
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/abi-workbench/abi_workbench.py",
+        "--demo"
+      ],
+      "exit": 0,
+      "stdout": {
+        "signature": "transfer(address,uint256)",
+        "selector": "0xa9059cbb",
+        "arguments": [
+          "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+          123
+        ],
+        "calldata": "0xa9059cbb000000000000000000000000d782bdea4ef02a0bd391eb9089470c8080f0a68e000000000000000000000000000000000000000000000000000000000000007b"
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/selector-audit/selector_audit.py",
+        "--abi",
+        "line-4/tools/selector-audit/erc20.json"
+      ],
+      "exit": 0,
+      "stdout": {
+        "function_count": 3,
+        "functions": [
+          {
+            "index": 0,
+            "name": "transfer",
+            "signature": "transfer(address,uint256)",
+            "selector": "0xa9059cbb",
+            "inputs_supported": true,
+            "output_types": [
+              "bool"
+            ],
+            "outputs_supported": true
+          },
+          {
+            "index": 1,
+            "name": "balanceOf",
+            "signature": "balanceOf(address)",
+            "selector": "0x70a08231",
+            "inputs_supported": true,
+            "output_types": [
+              "uint256"
+            ],
+            "outputs_supported": true
+          },
+          {
+            "index": 2,
+            "name": "approve",
+            "signature": "approve(address,uint256)",
+            "selector": "0x095ea7b3",
+            "inputs_supported": true,
+            "output_types": [
+              "bool"
+            ],
+            "outputs_supported": true
+          }
+        ],
+        "ambiguities": [],
+        "has_findings": false
+      },
+      "stderr": ""
+    }
+  ],
+  "network_or_transactions_by_tools": false
+}

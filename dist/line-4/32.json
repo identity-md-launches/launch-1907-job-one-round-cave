@@ -1,0 +1,30 @@
+{
+  "name": "The Broken Vessel Speaks",
+  "image": "https://api.imd.fun/artifacts/265a5f8eaada0ddf7349a4bcc658b6aec3d4c587d9283329f47f9eeb6621fd0a",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Ice"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 4"
+    },
+    {
+      "trait_type": "Number",
+      "value": 32
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Revert Lens"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Three ochre echoes leave a broken vessel, making the contents of failure readable."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline ABI calldata encoding and return decoding"
+    }
+  ]
+}
