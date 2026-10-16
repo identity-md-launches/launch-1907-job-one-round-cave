@@ -1,0 +1,30 @@
+{
+  "name": "The Divided Pebbles",
+  "image": "https://api.imd.fun/artifacts/c1546bfcd27582feed27c88eef2acacb093482b9b2e5ec20245e620d72bbf014",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Ice"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 32
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "CSV Duplicate Review"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A branching trail separates matching pebbles from a conflicting pair."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Reconcile CSV datasets by stable keys"
+    }
+  ]
+}

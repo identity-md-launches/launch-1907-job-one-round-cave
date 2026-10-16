@@ -1,0 +1,7 @@
+item,location,quantity,note
+flint,north,4,ready
+flint,north,4,ready
+ochre,south,2,packed
+ochre,south,3,packed
+,south,1,missing item
+reed,east,8,ready

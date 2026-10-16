@@ -1,0 +1,18 @@
+{
+  "record_shape_and_number": "pass",
+  "wall_digest_and_continuation": "pass",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "goal_older_records_and_tools_unchanged": "pass",
+  "changed_and_added_paths_within_scope": "pass",
+  "new_nonartifact_files_below_100KB": "pass",
+  "png_outputs_untracked": "pass",
+  "unmet_visual_requirements": [],
+  "visual_limits": "See STEP32_VISUAL_REVIEW.md for inherited anatomy and thumbnail limits."
+}

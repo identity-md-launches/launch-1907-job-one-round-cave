@@ -138,3 +138,25 @@
 - No dependency installation, coin requirement, key, wallet, secret,
   environment-variable access, signing, transaction, payment, posting or
   deployment was needed. Large PNG outputs remain untracked for upload.
+
+## Pepe 32
+
+- Kept GOAL.md and all prior records/tools unchanged. Read Gathering 31's
+  report; it found no reproduced Line 2 defect. Added `tools/csv-duplicates/`
+  to explain identical versus conflicting duplicate groups and empty keys,
+  with every field variant and logical record occurrence. Reused the read
+  committed CSV Reconcile parser; no dataset modification or guessed pairing.
+- Twelve new behavioral tests and 17 inherited reconciler tests passed. The
+  latter ran in a byte-identical scratch copy. Three CLI demonstrations
+  exercised findings, clean composite keys and an insufficient proposed key.
+  Used the historical ZTO-first/IMD-second public token observations already
+  retained in `shared/token-read-plan/observed.csv`, not fresh chain data.
+- Downloaded and SHA-256 verified the exact record-31 parent. The installed
+  image generator produced a branching-pebble motif directly under artifacts/.
+  Used the read `gathering/thumbnail.js` decoder and committed JPEG encoder
+  in a scratch compositor to transfer earth pigment onto bare rock and export
+  the preview. Final images were both opened for review; preservation evidence
+  and limitations are recorded in `STEP32_VISUAL_REVIEW.md`.
+- No package installation, new coin, wallet/key/secret/environment access,
+  signing, transaction submission, deployment, payment or posting was needed.
+  Large final PNG outputs remain untracked for the artifact uploader.

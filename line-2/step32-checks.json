@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-2/tools/csv-duplicates",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "expected_exit": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_cli_statuses_and_read_only (test_duplicates.DuplicateTests.test_cli_statuses_and_read_only) ... ok\ntest_composite_key (test_duplicates.DuplicateTests.test_composite_key) ... ok\ntest_conflicting_columns_and_all_occurrences (test_duplicates.DuplicateTests.test_conflicting_columns_and_all_occurrences) ... ok\ntest_controls_escaped_in_text (test_duplicates.DuplicateTests.test_controls_escaped_in_text) ... ok\ntest_empty_duplicate_is_counted_in_both_categories (test_duplicates.DuplicateTests.test_empty_duplicate_is_counted_in_both_categories) ... ok\ntest_empty_singleton (test_duplicates.DuplicateTests.test_empty_singleton) ... ok\ntest_header_only (test_duplicates.DuplicateTests.test_header_only) ... ok\ntest_identical_is_still_ambiguous (test_duplicates.DuplicateTests.test_identical_is_still_ambiguous) ... ok\ntest_invalid_csv (test_duplicates.DuplicateTests.test_invalid_csv) ... ok\ntest_invalid_key_requests (test_duplicates.DuplicateTests.test_invalid_key_requests) ... ok\ntest_logical_records_multiline_and_quoting (test_duplicates.DuplicateTests.test_logical_records_multiline_and_quoting) ... ok\ntest_strings_not_normalized (test_duplicates.DuplicateTests.test_strings_not_normalized) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.020s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/reconcile32",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "expected_exit": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_add_remove_change_and_exact_strings (test_reconcile.ReconciliationTests.test_add_remove_change_and_exact_strings) ... ok\ntest_blank_key_is_literal_and_duplicates_are_ambiguous (test_reconcile.ReconciliationTests.test_blank_key_is_literal_and_duplicates_are_ambiguous) ... ok\ntest_cli_exit_codes_and_parseable_output (test_reconcile.ReconciliationTests.test_cli_exit_codes_and_parseable_output) ... ok\ntest_composite_keys_do_not_concatenate_collisions (test_reconcile.ReconciliationTests.test_composite_keys_do_not_concatenate_collisions) ... ok\ntest_duplicate_key_never_silently_overwrites_or_pairs (test_reconcile.ReconciliationTests.test_duplicate_key_never_silently_overwrites_or_pairs) ... ok\ntest_duplicates_on_candidate_only_still_ambiguous (test_reconcile.ReconciliationTests.test_duplicates_on_candidate_only_still_ambiguous) ... ok\ntest_empty_tables_with_headers (test_reconcile.ReconciliationTests.test_empty_tables_with_headers) ... ok\ntest_ignored_columns (test_reconcile.ReconciliationTests.test_ignored_columns) ... ok\ntest_invalid_inputs (test_reconcile.ReconciliationTests.test_invalid_inputs) ... ok\ntest_invalid_options (test_reconcile.ReconciliationTests.test_invalid_options) ... ok\ntest_multiline_quoted_unicode_and_bom (test_reconcile.ReconciliationTests.test_multiline_quoted_unicode_and_bom) ... ok\ntest_non_utf8_is_rejected (test_reconcile.ReconciliationTests.test_non_utf8_is_rejected) ... ok\ntest_outside_path_rejected_before_open (test_reconcile.ReconciliationTests.test_outside_path_rejected_before_open) ... ok\ntest_reordering_rows_and_columns_is_equal (test_reconcile.ReconciliationTests.test_reordering_rows_and_columns_is_equal) ... ok\ntest_row_and_byte_bounds (test_reconcile.ReconciliationTests.test_row_and_byte_bounds) ... ok\ntest_schema_changes_are_not_claimed_equal (test_reconcile.ReconciliationTests.test_schema_changes_are_not_claimed_equal) ... ok\ntest_text_report_explains_differences_and_duplicate_keys (test_reconcile.ReconciliationTests.test_text_report_explains_differences_and_duplicate_keys) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.033s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/csv-duplicates/duplicates.py",
+        "line-2/tools/csv-duplicates/demo.csv",
+        "--key",
+        "item",
+        "--key",
+        "location",
+        "--format",
+        "text"
+      ],
+      "expected_exit": 1,
+      "exit": 1,
+      "stdout": "CSV duplicate-key review\nKeys: [\"item\", \"location\"]\nSummary: {\"conflicting_duplicate_groups\": 1, \"distinct_keys\": 4, \"empty_key_groups\": 1, \"finding_groups\": 3, \"identical_duplicate_groups\": 1, \"records\": 6}\n\nKey: {\"item\": \"\", \"location\": \"south\"}\nRecords: [6]\nDuplicate kind: singleton\nEmpty key columns: [\"item\"]\nDiffering columns: []\nField \"item\":\n  \"\" at records [6]\nField \"location\":\n  \"south\" at records [6]\nField \"quantity\":\n  \"1\" at records [6]\nField \"note\":\n  \"missing item\" at records [6]\n\nKey: {\"item\": \"flint\", \"location\": \"north\"}\nRecords: [2, 3]\nDuplicate kind: identical\nEmpty key columns: []\nDiffering columns: []\nField \"item\":\n  \"flint\" at records [2, 3]\nField \"location\":\n  \"north\" at records [2, 3]\nField \"quantity\":\n  \"4\" at records [2, 3]\nField \"note\":\n  \"ready\" at records [2, 3]\n\nKey: {\"item\": \"ochre\", \"location\": \"south\"}\nRecords: [4, 5]\nDuplicate kind: conflicting\nEmpty key columns: []\nDiffering columns: [\"quantity\"]\nField \"item\":\n  \"ochre\" at records [4, 5]\nField \"location\":\n  \"south\" at records [4, 5]\nField \"quantity\":\n  \"2\" at records [4]\n  \"3\" at records [5]\nField \"note\":\n  \"packed\" at records [4, 5]\nNo rows selected, paired, changed or removed.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/csv-duplicates/duplicates.py",
+        "shared/token-read-plan/observed.csv",
+        "--key",
+        "chain_id",
+        "--key",
+        "token_address",
+        "--key",
+        "field"
+      ],
+      "expected_exit": 0,
+      "exit": 0,
+      "stdout": "{\n  \"format\": \"csv-duplicates/v1\",\n  \"keys\": [\n    \"chain_id\",\n    \"token_address\",\n    \"field\"\n  ],\n  \"columns\": [\n    \"chain_id\",\n    \"token_address\",\n    \"expected_symbol\",\n    \"field\",\n    \"raw_value\",\n    \"display_value\",\n    \"block_number\"\n  ],\n  \"clean\": true,\n  \"summary\": {\n    \"records\": 6,\n    \"distinct_keys\": 6,\n    \"identical_duplicate_groups\": 0,\n    \"conflicting_duplicate_groups\": 0,\n    \"empty_key_groups\": 0,\n    \"finding_groups\": 0\n  },\n  \"findings\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/csv-duplicates/duplicates.py",
+        "shared/token-read-plan/observed.csv",
+        "--key",
+        "token_address"
+      ],
+      "expected_exit": 1,
+      "exit": 1,
+      "stdout": "{\n  \"format\": \"csv-duplicates/v1\",\n  \"keys\": [\n    \"token_address\"\n  ],\n  \"columns\": [\n    \"chain_id\",\n    \"token_address\",\n    \"expected_symbol\",\n    \"field\",\n    \"raw_value\",\n    \"display_value\",\n    \"block_number\"\n  ],\n  \"clean\": false,\n  \"summary\": {\n    \"records\": 6,\n    \"distinct_keys\": 2,\n    \"identical_duplicate_groups\": 0,\n    \"conflicting_duplicate_groups\": 2,\n    \"empty_key_groups\": 0,\n    \"finding_groups\": 2\n  },\n  \"findings\": [\n    {\n      \"key\": {\n        \"token_address\": \"0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7\"\n      },\n      \"empty_key_columns\": [],\n      \"duplicate_kind\": \"conflicting\",\n      \"records\": [\n        5,\n        6,\n        7\n      ],\n      \"differing_columns\": [\n        \"field\",\n        \"raw_value\",\n        \"display_value\"\n      ],\n      \"fields\": {\n        \"chain_id\": [\n          {\n            \"value\": \"1\",\n            \"records\": [\n              5,\n              6,\n              7\n            ],\n            \"count\": 3\n          }\n        ],\n        \"token_address\": [\n          {\n            \"value\": \"0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7\",\n            \"records\": [\n              5,\n              6,\n              7\n            ],\n            \"count\": 3\n          }\n        ],\n        \"expected_symbol\": [\n          {\n            \"value\": \"IMD\",\n            \"records\": [\n              5,\n              6,\n              7\n            ],\n            \"count\": 3\n          }\n        ],\n        \"field\": [\n          {\n            \"value\": \"decimals\",\n            \"records\": [\n              6\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"symbol\",\n            \"records\": [\n              5\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"totalSupply\",\n            \"records\": [\n              7\n            ],\n            \"count\": 1\n          }\n        ],\n        \"raw_value\": [\n          {\n            \"value\": \"18\",\n            \"records\": [\n              6\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"4164418598629000000000000\",\n            \"records\": [\n              7\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"IMD\",\n            \"records\": [\n              5\n            ],\n            \"count\": 1\n          }\n        ],\n        \"display_value\": [\n          {\n            \"value\": \"18\",\n            \"records\": [\n              6\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"4164418.598629\",\n            \"records\": [\n              7\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"IMD\",\n            \"records\": [\n              5\n            ],\n            \"count\": 1\n          }\n        ],\n        \"block_number\": [\n          {\n            \"value\": \"0x18fc1e6\",\n            \"records\": [\n              5,\n              6,\n              7\n            ],\n            \"count\": 3\n          }\n        ]\n      }\n    },\n    {\n      \"key\": {\n        \"token_address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\"\n      },\n      \"empty_key_columns\": [],\n      \"duplicate_kind\": \"conflicting\",\n      \"records\": [\n        2,\n        3,\n        4\n      ],\n      \"differing_columns\": [\n        \"field\",\n        \"raw_value\",\n        \"display_value\"\n      ],\n      \"fields\": {\n        \"chain_id\": [\n          {\n            \"value\": \"1\",\n            \"records\": [\n              2,\n              3,\n              4\n            ],\n            \"count\": 3\n          }\n        ],\n        \"token_address\": [\n          {\n            \"value\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n            \"records\": [\n              2,\n              3,\n              4\n            ],\n            \"count\": 3\n          }\n        ],\n        \"expected_symbol\": [\n          {\n            \"value\": \"ZTO\",\n            \"records\": [\n              2,\n              3,\n              4\n            ],\n            \"count\": 3\n          }\n        ],\n        \"field\": [\n          {\n            \"value\": \"decimals\",\n            \"records\": [\n              3\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"symbol\",\n            \"records\": [\n              2\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"totalSupply\",\n            \"records\": [\n              4\n            ],\n            \"count\": 1\n          }\n        ],\n        \"raw_value\": [\n          {\n            \"value\": \"1000000000000000000000000000\",\n            \"records\": [\n              4\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"18\",\n            \"records\": [\n              3\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"ZTO\",\n            \"records\": [\n              2\n            ],\n            \"count\": 1\n          }\n        ],\n        \"display_value\": [\n          {\n            \"value\": \"1000000000\",\n            \"records\": [\n              4\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"18\",\n            \"records\": [\n              3\n            ],\n            \"count\": 1\n          },\n          {\n            \"value\": \"ZTO\",\n            \"records\": [\n              2\n            ],\n            \"count\": 1\n          }\n        ],\n        \"block_number\": [\n          {\n            \"value\": \"0x18fc1e6\",\n            \"records\": [\n              2,\n              3,\n              4\n            ],\n            \"count\": 3\n          }\n        ]\n      }\n    }\n  ]\n}\n",
+      "stderr": ""
+    }
+  ]
+}

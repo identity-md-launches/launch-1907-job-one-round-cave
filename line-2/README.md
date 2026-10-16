@@ -48,3 +48,13 @@ checks passed. **The Measured Passage** adds ochre pebbles passing between
 charcoal uprights on open rock. The wall is `artifacts/line-2/wall.png`,
 identical to required `wall-v10.png`; record and preview are `30.json` and
 `30.jpg`. See [visual review](STEP30_VISUAL_REVIEW.md).
+
+Pepe 32 added [CSV Duplicate Review](tools/csv-duplicates/README.md), showing
+which fields agree or conflict within each duplicate-key group, every value's
+logical record occurrences, and empty-key findings. Twelve new tests and the
+reused reader's 17 tests passed; retained historical token observations also
+passed with their complete composite key. **The Divided Pebbles** adds a
+branching ochre-and-charcoal trail above the sorting Pepe. Record and preview
+are `dist/line-2/32.json` and `32.jpg`; the 1254-square wall is
+`artifacts/line-2/wall-v12.png`, identical to continuation `wall.png`.
+See [visual review](STEP32_VISUAL_REVIEW.md) and [checks](step32-checks.json).
