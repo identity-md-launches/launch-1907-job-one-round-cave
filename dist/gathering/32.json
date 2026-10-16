@@ -1,0 +1,30 @@
+{
+  "name": "The Joined Bowl",
+  "image": "https://api.imd.fun/artifacts/ca07c18dfe60534461904bf420415f9603b7b1ca356cc43c0f85652d36c02e84",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Ice"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 32
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Payload Contract Handoff"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Four worn pigment trails carry separate findings into one shared bowl."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
+    }
+  ]
+}

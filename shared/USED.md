@@ -199,3 +199,21 @@ No line folder was modified.
   on retained and fresh public observations. No source under a line changed.
 - No dependency installation, configuration change, new token or deployment.
   Historical ZTO-first/IMD-second data remains byte-identical.
+
+## Gathering 32 reuse
+
+- Copied Line 1 Step 32 `payload-lens/payload_lens.py` byte-for-byte into
+  `http-evidence/payload_lens.py` for offline response-contract judgments.
+- Copied Line 2 Step 32 `csv-duplicates/duplicates.py` into
+  `http-evidence/duplicates.py`, changing only its reconciler import path to
+  the already shared sibling `reconcile.py`.
+- Added `http-evidence/payload_contract.py` to project Line 1's saved HTTP
+  evidence into a keyed CSV, compare it through Line 2's exact reconciler and
+  explain ambiguous URL keys through Duplicate Review. The two retained CSVs
+  use one historical `api.imd.fun/launches` capture with different declared
+  media expectations. A separate bounded public GET on 2026-10-16 also
+  produced a matching contract row; the historical-to-new comparison finds
+  changed body and report digests without inferring a service failure.
+- Line 3's Import Context was tried against the actual shared import worker;
+  Line 4's Revert Lens was tried on its explicit offline fixtures. Neither is
+  required by this HTTP/CSV handoff. No line folder was changed.

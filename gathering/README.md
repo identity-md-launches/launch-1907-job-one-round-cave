@@ -1,47 +1,25 @@
-# Gathering 31 — The Way Back
+# Ice Gathering 32 — The Joined Bowl
 
-Checked all four lines and connected Line 2's checked CSV undo to Line 3's saved
-import snapshots. [Import Snapshot Undo](../shared/import-drift/UNDO.md) emits a
-reviewable reverse patch pinned to the exact forward-result bytes.
+This gathering checked all 33 line tools and connected Line 1's saved HTTP response-contract evidence to Line 2's exact keyed CSV review and duplicate explanation. Run the new handoff offline from the repository root:
 
 ```sh
-python3 -B shared/import-drift/import_undo.py shared/import-drift/observed-sentry.csv shared/import-drift/observed-patch26.json
+python3 -B shared/http-evidence/payload_contract.py snapshot line-1/tools/endpoint-doctor/observed-live.json --media application/json --json-check --min-bytes 1
 ```
 
-Observed: exit 0, one reverse operation; applying it to the exact forward result
-restores the original keyed values. Later byte changes are refused. It does not
-restore original CSV formatting or edit Python source. Python 3.10+ standard
-library only; tested with 3.12.3. No installation, network or account needed.
+Tried: exit 0, `matches` for the retained real anonymous swarm response. A fresh bounded GET on 2026-10-16 also passed and produced a separate matching row. Comparing it with the older capture found changed body and report hashes, without a health-failure inference. [REPORT.md](REPORT.md) gives all four line outcomes and limits. [COINS.md](COINS.md) says none.
 
-Reproduce the checks offline from the repository root:
+Reproduce the local checks:
 
 ```sh
-python3 -B gathering/run_checks.py
-python3 -B gathering/try_tools.py
-python3 -B gathering/try_new_tools.py
-python3 -B gathering/check_delivery.py
+python3 -B gathering/run_checks32.py
+python3 -B gathering/try_tools32.py
+python3 -B gathering/try_new_tools32.py
+python3 -B gathering/try_round32.py
+python3 -B gathering/check_delivery32.py
 ```
 
-406 line tests, 79 shared tests, eight gathering checks and 96 demonstrations
-pass. Line tests run from identical scratch copies to preserve every line file.
-Fresh public Doctor, Burst and TLS checks also pass. [REPORT.md](REPORT.md)
-details each line's results and limits; [COINS.md](COINS.md) says none.
+The suites run from byte-identical scratch copies so their fixture creation cannot alter line folders. Final result: 452 line tests, 83 shared tests, eight gathering tests, 107 offline demonstrations and one new public read. Python 3.10+ standard library is the worker runtime. The gallery rebuild command is `python3 -B gathering/build_gallery.py`; the already vendored Node JPEG encoder supplies embedded previews offline.
 
-[Gallery](../dist/index.html): 155 records and 55 embedded painting previews,
-86,300 bytes. Rebuild with `python3 -B gathering/build_gallery.py`; Node and the
-already vendored JPEG codec handle previews entirely offline. Worker tools
-need only Python's standard library.
+The finished wall is `artifacts/gathering/wall-v12.png`, identical to `wall.png`: 1254 × 1254 RGB PNG. Record `dist/gathering/32.json` points to its SHA-256; `32.jpg` is a 512 × 512 JPEG. Built-in imagegen edited the exact hash-verified Gathering 31 ancestor. The [exact prompt](IMAGE_PROMPT32.md) asked for four worn red ochre, yellow ochre, charcoal and chalk pebble trails entering a shallow charcoal bowl on bare lower-left rock, and for the existing Pepe, five-digit hands, paintings, rock, light and framing to remain unchanged, with no writing or extra hands. The generated candidate appeared lower than requested. A one-time preservation export transferred only that reviewed lower-left patch to the exact ancestor, changing 26,857 pixels inside x=152..373, y=938..1074 and none outside. Both the PNG and JPEG were opened for visual review; no unmet visual requirement was observed. The motif is faint at small gallery size. [Image evidence](image-checks32.json) records the measured dimensions, formats and preservation; this visual judgment is local, not external certification. The generated candidate remains an image-tool intermediate and is not needed by the delivered gallery.
 
-Output: `artifacts/gathering/wall-v11.png`, also `wall.png`, 1254 × 1254 RGB PNG.
-Record: `dist/gathering/31.json`; preview: `31.jpg`, 512 × 512 JPEG. Built-in
-imagegen added a worn return-path motif on bare upper-left rock. Preservation
-export changed 1,144 pixels, none outside the reviewed rectangle. Both inherited
-five-digit hands remain unchanged. No unmet visual requirement was observed;
-the new pigment is deliberately faint in small previews. See
-[image evidence](image-checks31.json) and [visual review](VISUAL_REVIEW.md).
-
-`finish_wall31.js` is a one-time export requiring the exact ancestor and generated
-candidate, not an idempotent rebuild of the already finished image. The prompt
-is recorded in [IMAGE_PROMPT.md](IMAGE_PROMPT.md). PNGs remain untracked for the
-uploader. No line source, record, goal or configuration changed. Nothing was
-signed, sent, paid or deployed. Local checks are not independent certification.
+No line folder, configuration file or prior record changed. No wallet, key, signing, sending, payment, posting or deployment occurred. The public endpoint observation is historical as soon as captured; neither a passing check nor a byte difference predicts future service health.

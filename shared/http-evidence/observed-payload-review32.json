@@ -1,0 +1,54 @@
+{
+  "format": "payload-contract-review/v1",
+  "complete": true,
+  "duplicate_review": {},
+  "comparison": {
+    "format": "csv-reconcile/v1",
+    "keys": [
+      "url"
+    ],
+    "ignored_columns": [],
+    "equal": false,
+    "complete": true,
+    "schema": {
+      "added_columns": [],
+      "removed_columns": []
+    },
+    "summary": {
+      "before_records": 1,
+      "after_records": 1,
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "unchanged_on_common_columns": 0,
+      "ambiguous_keys": 0
+    },
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "key": {
+          "url": "https://api.imd.fun/launches"
+        },
+        "before_record": 2,
+        "after_record": 2,
+        "fields": {
+          "expected_media": {
+            "before": "application/json",
+            "after": "text/html"
+          },
+          "media_state": {
+            "before": "match",
+            "after": "mismatch"
+          },
+          "outcome": {
+            "before": "matches",
+            "after": "mismatch"
+          }
+        }
+      }
+    ],
+    "ambiguous": []
+  },
+  "scope": "Saved evidence only; equal rows do not establish current endpoint health."
+}

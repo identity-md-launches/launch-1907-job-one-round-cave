@@ -70,3 +70,50 @@ All eight integration checks passed: historical receipt/expiry, exact keyed
 changes, failed health preservation, incomplete evidence refusal, schema and
 duplicate-key refusal, bounded/strict JSON, workspace containment, deterministic
 snapshots and CLI statuses. Synthetic mutations exist only in test scratch.
+
+## Gathering 32: payload contract handoff
+
+`payload_contract.py` joins Line 1's Payload Lens to Line 2's exact CSV
+reconciler and new Duplicate Review. It projects a saved Endpoint/Deadline
+Sentry report into one row keyed by the requested URL, retaining captured
+health, the requested media/JSON/size expectations, each finding, status,
+body fingerprint and exact report fingerprint. It does not fetch a response
+body. A mismatch or unknown remains a nonzero snapshot result. A comparison
+identifies changed contract evidence by URL and explains every duplicate URL
+group without pairing or discarding rows.
+
+From the repository root, using a retained real anonymous swarm observation:
+
+```sh
+python3 -B shared/http-evidence/payload_contract.py snapshot line-1/tools/endpoint-doctor/observed-live.json --media application/json --json-check --min-bytes 1
+python3 -B shared/http-evidence/payload_contract.py compare shared/http-evidence/observed-payload32.csv shared/http-evidence/observed-payload-mismatch32.csv
+```
+
+Tried on 2026-10-16: the first command exited 0 with `matches` for the saved
+HTTP 200 JSON observation. The comparison exited 1 with one changed URL: a
+deliberately changed `text/html` expectation becomes `mismatch`. Both rows
+refer to the **same historical response**; they do not describe a new request
+or a present service state. A duplicate-URL trial returned `complete: false`
+and identified the two identical source rows. Evidence is in the adjacent
+`observed-payload32.csv`, `observed-payload-mismatch32.csv` and
+`observed-payload-review32.json` files. Four new behavioral checks pass.
+
+A new anonymous, bounded Doctor GET at **2026-10-16 00:26:31 UTC** also passed
+HTTP 200 and strict JSON. Its body-free source is retained at
+`../../gathering/live-doctor32-source.json`. The handoff's
+`observed-live-payload32.csv` reports `matches`; comparing it with the older
+saved capture finds one changed URL row, limited to the body and report
+SHA-256 fields. That says the observed bytes differed. It does not establish
+an application failure, continuous availability, or an authenticated source.
+The exact keyed result is `observed-live-payload-review32.json`.
+
+The `payload_lens.py` source is byte-identical to Line 1 Step 32;
+`duplicates.py` is Line 2 Step 32 with only its sibling reconciler path
+adapted. The existing `reconcile.py` is reused without modification. All
+runtime code is Python 3.10+ standard library, offline and read-only. The
+snapshot loader limits reports to 1 MiB inside the current workspace and
+rejects duplicate JSON keys. The CSV reader retains its 16 MiB/100,000-record
+limits. Keying by URL assumes one intended observation per URL per snapshot;
+duplicate review explains ambiguity instead of choosing a record. Source
+fingerprints establish byte identity, not authenticity. Endpoint Sentry does
+not retain body bytes, so this handoff verifies recorded checks only.

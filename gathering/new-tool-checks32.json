@@ -1,0 +1,200 @@
+{
+  "round": 32,
+  "ok": true,
+  "context_summary": {
+    "import_sites": 202,
+    "nested_sites": 1,
+    "module_body_sites": 201
+  },
+  "results": [
+    {
+      "name": "Payload Lens retained real JSON response",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-1/tools/payload-lens/payload_lens.py",
+        "line-1/tools/endpoint-doctor/observed-live.json",
+        "--media",
+        "application/json",
+        "--json-check",
+        "--min-bytes",
+        "1"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout_bytes": 1045,
+      "stderr": ""
+    },
+    {
+      "name": "CSV Duplicate Review demonstration",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/csv-duplicates/duplicates.py",
+        "line-2/tools/csv-duplicates/demo.csv",
+        "--key",
+        "item",
+        "--key",
+        "location"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "stdout_bytes": 3413,
+      "stderr": ""
+    },
+    {
+      "name": "CSV Duplicate Review retained ZTO/IMD rows",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/csv-duplicates/duplicates.py",
+        "shared/token-read-plan/observed.csv",
+        "--key",
+        "chain_id",
+        "--key",
+        "token_address",
+        "--key",
+        "field"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout_bytes": 476,
+      "stderr": ""
+    },
+    {
+      "name": "Import Context actual shared source",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-3/tools/import-context/context.py",
+        "shared/import-drift",
+        "--json",
+        "--strict"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout_bytes": 50034,
+      "stderr": ""
+    },
+    {
+      "name": "Import Context nested fixture",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-3/tools/import-context/context.py",
+        "line-3/tools/import-context/examples",
+        "--json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout_bytes": 5977,
+      "stderr": ""
+    },
+    {
+      "name": "Revert Lens offline constructed reason",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-4/tools/revert-lens/revert_lens.py",
+        "--demo"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout_bytes": 390,
+      "stderr": ""
+    },
+    {
+      "name": "Revert Lens offline panic bytes",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-4/tools/revert-lens/revert_lens.py",
+        "--data",
+        "0x4e487b710000000000000000000000000000000000000000000000000000000000000011"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout_bytes": 469,
+      "stderr": ""
+    },
+    {
+      "name": "Shared matching contract snapshot",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "shared/http-evidence/payload_contract.py",
+        "snapshot",
+        "line-1/tools/endpoint-doctor/observed-live.json",
+        "--json-check",
+        "--min-bytes",
+        "1",
+        "--media",
+        "application/json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout_bytes": 361,
+      "stderr": ""
+    },
+    {
+      "name": "Shared mismatched contract snapshot",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "shared/http-evidence/payload_contract.py",
+        "snapshot",
+        "line-1/tools/endpoint-doctor/observed-live.json",
+        "--json-check",
+        "--min-bytes",
+        "1",
+        "--media",
+        "text/html"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "stdout_bytes": 358,
+      "stderr": ""
+    },
+    {
+      "name": "Shared exact keyed contract review",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "shared/http-evidence/payload_contract.py",
+        "compare",
+        "shared/http-evidence/observed-payload32.csv",
+        "shared/http-evidence/observed-payload-mismatch32.csv"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "stdout_bytes": 1195,
+      "stderr": ""
+    },
+    {
+      "name": "Shared ambiguous URL diagnosis",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "shared/http-evidence/payload_contract.py",
+        "compare",
+        "shared/http-evidence/observed-payload32.csv",
+        "test/scratch/gathering32/round32/duplicate.csv"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "stdout_bytes": 6754,
+      "stderr": ""
+    }
+  ]
+}

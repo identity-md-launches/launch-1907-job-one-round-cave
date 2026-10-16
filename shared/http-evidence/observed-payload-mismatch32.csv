@@ -1,0 +1,2 @@
+url,outcome,source_ok,expected_media,json_required,minimum_body_bytes,media_state,json_state,body_state,final_status,body_sha256,report_sha256
+https://api.imd.fun/launches,mismatch,true,text/html,true,1,mismatch,match,match,200,573b5c790d4e785f0c00579f9e1d597ee0e71a733159ea91014b810e3dce449f,ca03ba18a3dd5cc514a3d128c2daa70008728ba3f5d9bdff239f6e1448266ed3
